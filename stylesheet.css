@@ -1,0 +1,57 @@
+/* Style sheet created by SabWaFei */
+
+/* 
+    Start default-styles 
+*/
+
+/* Remove padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+:root {
+  /* colors */
+  /* primary colors */
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+
+  /* netrual colors */
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+body {
+  /* typography */
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  --font-weight-bold: 500;
+  --font-weight-bolder: 600;
+}
+
+.wrapper {
+  margin-right: auto; /* 1 */
+  margin-left: auto; /* 1 */
+
+  max-width: 1440px; /* 2 */
+
+  padding-right: 10px; /* 3 */
+  padding-left: 10px; /* 3 */
+}
+/* 
+    End default-styles 
+*/
+
+/* 
+    post heading styling 
+*/
+.post-heading {
+  display: flex;
+  flex-direction: row;
+}
+/* 
+    End post heading styling 
+*/
