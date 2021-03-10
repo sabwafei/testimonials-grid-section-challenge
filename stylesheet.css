@@ -30,6 +30,7 @@ body {
   font-size: 13px;
   --font-weight-bold: 500;
   --font-weight-bolder: 600;
+  background-color: var(--Light-gray);
 }
 
 .wrapper {
@@ -46,12 +47,66 @@ body {
 */
 
 /* 
-    post heading styling 
+    post styling
+    styles the main post including profile pic, name title, description and flavor-text 
 */
+.post {
+  margin: 15px;
+  /* temp sizing */
+  width: 500px;
+  border-radius: 5px;
+  padding: 25px;
+}
+.post-profile-pic {
+  border-radius: 30px;
+  border: solid white 1px;
+}
+.post-flavor-text {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: var(--font-weight-bolder);
+}
+.post-description {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: var(--font-weight-bold);
+}
 .post-heading {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
 }
+.post-signature {
+  margin: 5px;
+  padding-top: 10px;
+}
+.post-profile-pic {
+  margin: 5px;
+}
+.post-name {
+  font-weight: var(--font-weight-bolder);
+}
+#one {
+  background-color: var(--Moderate-violet);
+  color: var(--white);
+}
+#two {
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--white);
+}
+#three {
+  background-color: var(--white);
+  color: var(--Very-dark-blackish-blue);
+}
+#four {
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--white);
+}
+#five {
+  background-color: var(--white);
+  color: var(--Very-dark-blackish-blue);
+}
+
 /* 
-    End post heading styling 
+    End post styling 
 */
