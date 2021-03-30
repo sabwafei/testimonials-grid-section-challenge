@@ -1,53 +1,71 @@
 /* Style sheet created by SabWaFei */
 
 /* 
+media query styling
+320px — 480px: Mobile devices.
+481px — 768px: iPads, Tablets.
+769px — 1024px: Small screens, laptops.
+1025px — 1200px: Desktops, large screens.
+1201px and more — Extra large screens, TV.
+ */
+/* 
     Start default-styles 
 */
 
 /* Browser Reset */
 * {
-	margin: 0;
-	padding: 0;
-	border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 :root {
-	/* colors */
-	/* primary colors */
-	--Moderate-violet: hsl(263, 55%, 52%);
-	--Very-dark-grayish-blue: hsl(217, 19%, 35%);
-	--Very-dark-blackish-blue: hsl(219, 29%, 14%);
-	--white: hsl(0, 0%, 100%);
+  /* colors */
+  /* primary colors */
+  --Moderate-violet: hsl(263, 55%, 52%);
+  --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
 
-	/* netrual colors */
-	--Light-gray: hsl(0, 0%, 81%);
-	--Light-grayish-blue: hsl(210, 46%, 95%);
+  /* netrual colors */
+  --Light-gray: hsl(0, 0%, 81%);
+  --Light-grayish-blue: hsl(210, 46%, 95%);
 }
 
 body {
-	/* typography */
-	font-family: "Barlow Semi Condensed", sans-serif;
-	font-size: 13px;
-	--font-weight-bold: 500;
-	--font-weight-bolder: 600;
-	background-color: var(--Light-gray);
+  /* typography */
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  --font-weight-bold: 500;
+  --font-weight-bolder: 600;
+  background-color: var(--Light-gray);
 }
 
 .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: hsl(0, 0%, 81%);
-	height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: hsl(0, 0%, 81%);
 }
 
 .main-content {
-	max-width: 1440px; /* 2 */
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 1fr);
-	grid-column-gap: 15px;
-	grid-row-gap: 15px;
+  max-width: 1440px; /* 2 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+}
+/* sizing for mobile */
+@media screen and (max-width: 480px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
 }
 /* 
     End default-styles 
@@ -58,37 +76,37 @@ body {
     styles the main post including profile pic, name title, description and flavor-text 
 */
 .post {
-	/* temp sizing */
-	border-radius: 10px;
-	padding: 30px;
+  /* temp sizing */
+  border-radius: 10px;
+  padding: 30px;
 }
 .post-profile-pic {
-	border-radius: 30px;
-	border: solid white 1px;
-	margin: 5px;
+  border-radius: 30px;
+  border: solid white 1px;
+  margin: 5px;
 }
 .post-flavor-text {
-	margin-top: 10px;
-	margin-bottom: 15px;
-	font-weight: var(--font-weight-bolder);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: var(--font-weight-bolder);
 }
 .post-description {
-	margin-top: 10px;
-	margin-bottom: 15px;
-	font-weight: var(--font-weight-bold);
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: var(--font-weight-bold);
 }
 .post-heading {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 .post-signature {
-	margin: 5px;
-	padding-top: 10px;
+  margin: 5px;
+  padding-top: 10px;
 }
 
 .post-name {
-	font-weight: var(--font-weight-bolder);
+  font-weight: var(--font-weight-bolder);
 }
 /* 
     End post styling 
@@ -99,39 +117,31 @@ body {
    styles the unique elements of "post"
 */
 #one {
-	background-color: var(--Moderate-violet);
-	color: var(--white);
-	grid-area: 1 / 1 / 2 / 3;
+  background-color: var(--Moderate-violet);
+  color: var(--white);
+  grid-area: 1 / 1 / 2 / 3;
 }
 #two {
-	background-color: var(--Very-dark-grayish-blue);
-	color: var(--white);
-	grid-area: 1 / 3 / 2 / 4;
+  background-color: var(--Very-dark-grayish-blue);
+  color: var(--white);
+  grid-area: 1 / 3 / 2 / 4;
 }
 #three {
-	background-color: var(--white);
-	color: var(--Very-dark-blackish-blue);
-	grid-area: 1 / 4 / 3 / 5;
+  background-color: var(--white);
+  color: var(--Very-dark-blackish-blue);
+  grid-area: 1 / 4 / 3 / 5;
 }
 #four {
-	background-color: var(--white);
-	color: var(--Very-dark-blackish-blue);
-	grid-area: 2 / 1 / 3 / 2;
+  background-color: var(--white);
+  color: var(--Very-dark-blackish-blue);
+  grid-area: 2 / 1 / 3 / 2;
 }
 #five {
-	background-color: var(--Very-dark-blackish-blue);
-	color: var(--white);
+  background-color: var(--Very-dark-blackish-blue);
+  color: var(--white);
 
-	grid-area: 2 / 2 / 3 / 4;
+  grid-area: 2 / 2 / 3 / 4;
 }
 /*
    End of unique styling of post
-*/
-
-/* 
-  mobile layout styling 
-*/
-
-/* 
-  End mobile layout styling 
 */
